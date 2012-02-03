@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7021D33214DC69BD005076D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33114DC69BD005076D1 /* UIKit.framework */; };
+		7021D33414DC69BD005076D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33314DC69BD005076D1 /* Foundation.framework */; };
+		7021D33614DC69BD005076D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33514DC69BD005076D1 /* CoreGraphics.framework */; };
+		7021D33814DC69BD005076D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33714DC69BD005076D1 /* CoreData.framework */; };
+		7021D33E14DC69BD005076D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7021D33C14DC69BD005076D1 /* InfoPlist.strings */; };
+		7021D34014DC69BD005076D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D33F14DC69BD005076D1 /* main.m */; };
+		7021D34414DC69BD005076D1 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34314DC69BD005076D1 /* BIDAppDelegate.m */; };
+		7021D34714DC69BD005076D1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7021D34514DC69BD005076D1 /* MainStoryboard.storyboard */; };
+		7021D34A14DC69BD005076D1 /* PumperApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */; };
+		7021D34D14DC69BD005076D1 /* BIDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */; };
+		7021D35014DC69BD005076D1 /* BIDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */; };
+		7021D35814DC69BD005076D1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D35714DC69BD005076D1 /* SenTestingKit.framework */; };
+		7021D35914DC69BD005076D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33114DC69BD005076D1 /* UIKit.framework */; };
+		7021D35A14DC69BD005076D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33314DC69BD005076D1 /* Foundation.framework */; };
+		7021D35B14DC69BD005076D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33714DC69BD005076D1 /* CoreData.framework */; };
+		7021D36314DC69BD005076D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7021D36114DC69BD005076D1 /* InfoPlist.strings */; };
+		7021D36614DC69BD005076D1 /* PumperAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D36514DC69BD005076D1 /* PumperAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7021D35C14DC69BD005076D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7021D32414DC69BD005076D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7021D32C14DC69BD005076D1;
+			remoteInfo = PumperApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7021D32D14DC69BD005076D1 /* PumperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PumperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7021D33114DC69BD005076D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7021D33314DC69BD005076D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7021D33514DC69BD005076D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7021D33714DC69BD005076D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7021D33B14DC69BD005076D1 /* PumperApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PumperApp-Info.plist"; sourceTree = "<group>"; };
+		7021D33D14DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7021D33F14DC69BD005076D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7021D34114DC69BD005076D1 /* PumperApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PumperApp-Prefix.pch"; sourceTree = "<group>"; };
+		7021D34214DC69BD005076D1 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		7021D34314DC69BD005076D1 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		7021D34614DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7021D34914DC69BD005076D1 /* PumperApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PumperApp.xcdatamodel; sourceTree = "<group>"; };
+		7021D34B14DC69BD005076D1 /* BIDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDMasterViewController.h; sourceTree = "<group>"; };
+		7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDMasterViewController.m; sourceTree = "<group>"; };
+		7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDDetailViewController.h; sourceTree = "<group>"; };
+		7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDDetailViewController.m; sourceTree = "<group>"; };
+		7021D35614DC69BD005076D1 /* PumperAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PumperAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7021D35714DC69BD005076D1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7021D36014DC69BD005076D1 /* PumperAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PumperAppTests-Info.plist"; sourceTree = "<group>"; };
+		7021D36214DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7021D36414DC69BD005076D1 /* PumperAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumperAppTests.h; sourceTree = "<group>"; };
+		7021D36514DC69BD005076D1 /* PumperAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PumperAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7021D32A14DC69BD005076D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D33214DC69BD005076D1 /* UIKit.framework in Frameworks */,
+				7021D33414DC69BD005076D1 /* Foundation.framework in Frameworks */,
+				7021D33614DC69BD005076D1 /* CoreGraphics.framework in Frameworks */,
+				7021D33814DC69BD005076D1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7021D35214DC69BD005076D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D35814DC69BD005076D1 /* SenTestingKit.framework in Frameworks */,
+				7021D35914DC69BD005076D1 /* UIKit.framework in Frameworks */,
+				7021D35A14DC69BD005076D1 /* Foundation.framework in Frameworks */,
+				7021D35B14DC69BD005076D1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7021D32214DC69BD005076D1 = {
+			isa = PBXGroup;
+			children = (
+				7021D33914DC69BD005076D1 /* PumperApp */,
+				7021D35E14DC69BD005076D1 /* PumperAppTests */,
+				7021D33014DC69BD005076D1 /* Frameworks */,
+				7021D32E14DC69BD005076D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7021D32E14DC69BD005076D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7021D32D14DC69BD005076D1 /* PumperApp.app */,
+				7021D35614DC69BD005076D1 /* PumperAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7021D33014DC69BD005076D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7021D33114DC69BD005076D1 /* UIKit.framework */,
+				7021D33314DC69BD005076D1 /* Foundation.framework */,
+				7021D33514DC69BD005076D1 /* CoreGraphics.framework */,
+				7021D33714DC69BD005076D1 /* CoreData.framework */,
+				7021D35714DC69BD005076D1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7021D33914DC69BD005076D1 /* PumperApp */ = {
+			isa = PBXGroup;
+			children = (
+				7021D34214DC69BD005076D1 /* BIDAppDelegate.h */,
+				7021D34314DC69BD005076D1 /* BIDAppDelegate.m */,
+				7021D34514DC69BD005076D1 /* MainStoryboard.storyboard */,
+				7021D34B14DC69BD005076D1 /* BIDMasterViewController.h */,
+				7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */,
+				7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */,
+				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
+				7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */,
+				7021D33A14DC69BD005076D1 /* Supporting Files */,
+			);
+			path = PumperApp;
+			sourceTree = "<group>";
+		};
+		7021D33A14DC69BD005076D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7021D33B14DC69BD005076D1 /* PumperApp-Info.plist */,
+				7021D33C14DC69BD005076D1 /* InfoPlist.strings */,
+				7021D33F14DC69BD005076D1 /* main.m */,
+				7021D34114DC69BD005076D1 /* PumperApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7021D35E14DC69BD005076D1 /* PumperAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7021D36414DC69BD005076D1 /* PumperAppTests.h */,
+				7021D36514DC69BD005076D1 /* PumperAppTests.m */,
+				7021D35F14DC69BD005076D1 /* Supporting Files */,
+			);
+			path = PumperAppTests;
+			sourceTree = "<group>";
+		};
+		7021D35F14DC69BD005076D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7021D36014DC69BD005076D1 /* PumperAppTests-Info.plist */,
+				7021D36114DC69BD005076D1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7021D32C14DC69BD005076D1 /* PumperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7021D36914DC69BD005076D1 /* Build configuration list for PBXNativeTarget "PumperApp" */;
+			buildPhases = (
+				7021D32914DC69BD005076D1 /* Sources */,
+				7021D32A14DC69BD005076D1 /* Frameworks */,
+				7021D32B14DC69BD005076D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PumperApp;
+			productName = PumperApp;
+			productReference = 7021D32D14DC69BD005076D1 /* PumperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7021D35514DC69BD005076D1 /* PumperAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7021D36C14DC69BD005076D1 /* Build configuration list for PBXNativeTarget "PumperAppTests" */;
+			buildPhases = (
+				7021D35114DC69BD005076D1 /* Sources */,
+				7021D35214DC69BD005076D1 /* Frameworks */,
+				7021D35314DC69BD005076D1 /* Resources */,
+				7021D35414DC69BD005076D1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7021D35D14DC69BD005076D1 /* PBXTargetDependency */,
+			);
+			name = PumperAppTests;
+			productName = PumperAppTests;
+			productReference = 7021D35614DC69BD005076D1 /* PumperAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7021D32414DC69BD005076D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7021D32714DC69BD005076D1 /* Build configuration list for PBXProject "PumperApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7021D32214DC69BD005076D1;
+			productRefGroup = 7021D32E14DC69BD005076D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7021D32C14DC69BD005076D1 /* PumperApp */,
+				7021D35514DC69BD005076D1 /* PumperAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7021D32B14DC69BD005076D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D33E14DC69BD005076D1 /* InfoPlist.strings in Resources */,
+				7021D34714DC69BD005076D1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7021D35314DC69BD005076D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D36314DC69BD005076D1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7021D35414DC69BD005076D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7021D32914DC69BD005076D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D34014DC69BD005076D1 /* main.m in Sources */,
+				7021D34414DC69BD005076D1 /* BIDAppDelegate.m in Sources */,
+				7021D34A14DC69BD005076D1 /* PumperApp.xcdatamodeld in Sources */,
+				7021D34D14DC69BD005076D1 /* BIDMasterViewController.m in Sources */,
+				7021D35014DC69BD005076D1 /* BIDDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7021D35114DC69BD005076D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7021D36614DC69BD005076D1 /* PumperAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7021D35D14DC69BD005076D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7021D32C14DC69BD005076D1 /* PumperApp */;
+			targetProxy = 7021D35C14DC69BD005076D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7021D33C14DC69BD005076D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7021D33D14DC69BD005076D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7021D34514DC69BD005076D1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7021D34614DC69BD005076D1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		7021D36114DC69BD005076D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7021D36214DC69BD005076D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7021D36714DC69BD005076D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7021D36814DC69BD005076D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7021D36A14DC69BD005076D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
+				INFOPLIST_FILE = "PumperApp/PumperApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7021D36B14DC69BD005076D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
+				INFOPLIST_FILE = "PumperApp/PumperApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7021D36D14DC69BD005076D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PumperApp.app/PumperApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
+				INFOPLIST_FILE = "PumperAppTests/PumperAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7021D36E14DC69BD005076D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PumperApp.app/PumperApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
+				INFOPLIST_FILE = "PumperAppTests/PumperAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7021D32714DC69BD005076D1 /* Build configuration list for PBXProject "PumperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7021D36714DC69BD005076D1 /* Debug */,
+				7021D36814DC69BD005076D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7021D36914DC69BD005076D1 /* Build configuration list for PBXNativeTarget "PumperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7021D36A14DC69BD005076D1 /* Debug */,
+				7021D36B14DC69BD005076D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7021D36C14DC69BD005076D1 /* Build configuration list for PBXNativeTarget "PumperAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7021D36D14DC69BD005076D1 /* Debug */,
+				7021D36E14DC69BD005076D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7021D34914DC69BD005076D1 /* PumperApp.xcdatamodel */,
+			);
+			currentVersion = 7021D34914DC69BD005076D1 /* PumperApp.xcdatamodel */;
+			path = PumperApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7021D32414DC69BD005076D1 /* Project object */;
+}

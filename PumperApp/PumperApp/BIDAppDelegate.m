@@ -23,6 +23,7 @@
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     splitViewController.delegate = (id)navigationController.topViewController;
+    //test
 
     UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
     BIDMasterViewController *controller = (BIDMasterViewController *)masterNavigationController.topViewController;

@@ -9,6 +9,9 @@
 #import "BIDMasterViewController.h"
 
 #import "BIDDetailViewController.h"
+#import "StopManagerMock.h"
+
+static float counter = 0;
 
 @interface BIDMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -300,6 +303,7 @@
 
 - (void)insertNewObject
 {
+    
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
@@ -308,10 +312,16 @@
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
 //    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    [newManagedObject setValue:@"TestDesc" forKey:@"name"];
-    [newManagedObject setValue:[NSNumber numberWithInt:2324] forKey:@"id"];
-    [newManagedObject setValue:[NSNumber numberWithFloat:35.56] forKey:@"lat"];
-    [newManagedObject setValue:[NSNumber numberWithFloat:85.56] forKey:@"long"];
+    
+    Stop* stop = [[StopManagerMock getStopManager] getStopDetails:counter];
+    
+    if (stop != nil) {
+        [newManagedObject setValue:stop.name forKey:@"name"];
+        [newManagedObject setValue:[NSNumber numberWithInteger:stop.stopId] forKey:@"id"];
+        [newManagedObject setValue:[NSNumber numberWithFloat:stop.latitude] forKey:@"lat"];
+        [newManagedObject setValue:[NSNumber numberWithFloat:stop.longitude] forKey:@"long"];
+        [newManagedObject setValue:stop.desc forKey:@"desc"];
+    }
     
     // Save the context.
     NSError *error = nil;
@@ -324,6 +334,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    counter ++;
 }
 
 @end

@@ -24,6 +24,8 @@
 		7021D35B14DC69BD005076D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33714DC69BD005076D1 /* CoreData.framework */; };
 		7021D36314DC69BD005076D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7021D36114DC69BD005076D1 /* InfoPlist.strings */; };
 		7021D36614DC69BD005076D1 /* PumperAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D36514DC69BD005076D1 /* PumperAppTests.m */; };
+		707A412214DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
+		707A412314DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		7021D36214DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7021D36414DC69BD005076D1 /* PumperAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumperAppTests.h; sourceTree = "<group>"; };
 		7021D36514DC69BD005076D1 /* PumperAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PumperAppTests.m; sourceTree = "<group>"; };
+		707A412014DDBED300F43040 /* StopManagerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopManagerMock.h; sourceTree = "<group>"; };
+		707A412114DDBED300F43040 /* StopManagerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopManagerMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
 				7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */,
 				7021D33A14DC69BD005076D1 /* Supporting Files */,
+				707A412014DDBED300F43040 /* StopManagerMock.h */,
+				707A412114DDBED300F43040 /* StopManagerMock.m */,
 			);
 			path = PumperApp;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				7021D34A14DC69BD005076D1 /* PumperApp.xcdatamodeld in Sources */,
 				7021D34D14DC69BD005076D1 /* BIDMasterViewController.m in Sources */,
 				7021D35014DC69BD005076D1 /* BIDDetailViewController.m in Sources */,
+				707A412214DDBED300F43040 /* StopManagerMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7021D36614DC69BD005076D1 /* PumperAppTests.m in Sources */,
+				707A412314DDBED300F43040 /* StopManagerMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +455,7 @@
 				7021D36B14DC69BD005076D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7021D36C14DC69BD005076D1 /* Build configuration list for PBXNativeTarget "PumperAppTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +464,7 @@
 				7021D36E14DC69BD005076D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

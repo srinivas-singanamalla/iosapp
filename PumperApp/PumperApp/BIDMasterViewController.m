@@ -42,7 +42,7 @@ static float counter = 0;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.detailViewController = (BIDDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (BIDDetailViewController *)[[[self.splitViewController.viewControllers lastObject] viewControllers] objectAtIndex:0];
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 

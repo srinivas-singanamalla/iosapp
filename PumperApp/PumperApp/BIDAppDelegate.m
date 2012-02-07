@@ -7,8 +7,15 @@
 //
 
 #import "BIDAppDelegate.h"
-
+#import "BIDModelController.h"
 #import "BIDMasterViewController.h"
+
+@interface BIDAppDelegate ()
+@property (readonly, strong, nonatomic) BIDModelController *modelController;
+@end
+
+
+
 
 @implementation BIDAppDelegate
 
@@ -16,19 +23,61 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize modelController = _modelController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    splitViewController.delegate = (id)navigationController.topViewController;
+    UIPageViewController *pageViewController = (UIPageViewController*)[splitViewController.viewControllers lastObject];
+    pageViewController.delegate = self;
+    
+    BIDDetailViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:splitViewController.storyboard];
+    
+    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
+    [pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+    
+    pageViewController.dataSource = self.modelController;
+    
+    
+    BIDDetailViewController *detailViewController = (BIDDetailViewController *)[pageViewController.viewControllers objectAtIndex:0];
+    splitViewController.delegate = (id<UISplitViewControllerDelegate>) detailViewController;
+    
+    
     //test
 
     UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
     BIDMasterViewController *controller = (BIDMasterViewController *)masterNavigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
+}
+
+
+- (void) test {
+    
+    /*
+    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController.delegate = self;
+    
+    BIDDataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+    
+    self.pageViewController.dataSource = self.modelController;
+    
+    [self addChildViewController:self.pageViewController];
+    [self.view addSubview:self.pageViewController.view];
+    
+    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
+    CGRect pageViewRect = self.view.bounds;
+    pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    self.pageViewController.view.frame = pageViewRect;
+    
+    [self.pageViewController didMoveToParentViewController:self];    
+    
+    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
+    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    */
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -179,5 +228,40 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+- (BIDModelController *)modelController
+{
+    /*
+     Return the model controller object, creating it if necessary.
+     In more complex implementations, the model controller may be passed to the view controller.
+     */
+    if (!_modelController) {
+        _modelController = [[BIDModelController alloc] init];
+    }
+    return _modelController;
+}
+
+#pragma mark - UIPageViewController delegate methods
+
+/*
+ - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+ {
+ 
+ }
+ */
+
+- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    //if (UIInterfaceOrientationIsPortrait(orientation)) {
+        // In portrait orientation: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
+        UIViewController *currentViewController = [pageViewController.viewControllers objectAtIndex:0];
+        NSArray *viewControllers = [NSArray arrayWithObject:currentViewController];
+        [pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
+        
+        pageViewController.doubleSided = NO;
+        return UIPageViewControllerSpineLocationMin;
+    //}
+}
+
 
 @end

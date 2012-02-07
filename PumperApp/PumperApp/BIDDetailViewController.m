@@ -18,8 +18,11 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize dataLabel = _dataLabel;
+@synthesize dataObject = _dataObject;
 
-#pragma mark - Managing the detail item
+     
+#pragma mark - Managing the detail item 
 
 - (void)setDetailItem:(id)newDetailItem
 {
@@ -74,6 +77,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.dataLabel.text = [self.dataObject description];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

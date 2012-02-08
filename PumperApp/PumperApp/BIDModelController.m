@@ -45,8 +45,11 @@
         return nil;
     }
     
-    // Create a new view controller and pass suitable data.
-    BIDDetailViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"BIDDetailViewController"];
+    // Create a new view controller and pass suitable data.        
+    NSArray* controllerIdentifierArray = [NSArray arrayWithObjects:@"BIDDetailViewController", @"GasMeterViewController", @"TankViewController", @"WellheadViewController", nil];
+    
+    BIDDetailViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier: index < 4 ? [controllerIdentifierArray objectAtIndex:index] : @"BIDDetailViewController"];
+    
     dataViewController.dataObject = [self.pageData objectAtIndex:index];
     return dataViewController;
 }

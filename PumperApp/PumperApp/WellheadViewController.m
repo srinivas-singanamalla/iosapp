@@ -9,6 +9,12 @@
 #import "WellheadViewController.h"
 
 @implementation WellheadViewController
+@synthesize tubingPressure;
+@synthesize casingPressure;
+@synthesize chokeSize;
+@synthesize dailyProducingStatus;
+@synthesize comments;
+@synthesize downtimeUnits;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +52,12 @@
 
 - (void)viewDidUnload
 {
+    [self setTubingPressure:nil];
+    [self setCasingPressure:nil];
+    [self setChokeSize:nil];
+    [self setDailyProducingStatus:nil];
+    [self setDowntimeUnits:nil];
+    [self setComments:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

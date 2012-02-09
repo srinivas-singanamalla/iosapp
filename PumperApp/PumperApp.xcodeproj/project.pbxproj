@@ -421,6 +421,7 @@
 				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
 				INFOPLIST_FILE = "PumperApp/PumperApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,6 +434,7 @@
 				GCC_PREFIX_HEADER = "PumperApp/PumperApp-Prefix.pch";
 				INFOPLIST_FILE = "PumperApp/PumperApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

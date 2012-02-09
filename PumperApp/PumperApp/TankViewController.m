@@ -9,6 +9,14 @@
 #import "TankViewController.h"
 
 @implementation TankViewController
+@synthesize topFrom;
+@synthesize topTo;
+@synthesize bottomFrom;
+@synthesize bottomTo;
+@synthesize useCalcFrom;
+@synthesize useCalcTo;
+@synthesize purchaseNumber;
+@synthesize stock;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +54,14 @@
 
 - (void)viewDidUnload
 {
+    [self setTopFrom:nil];
+    [self setTopTo:nil];
+    [self setBottomFrom:nil];
+    [self setBottomTo:nil];
+    [self setUseCalcFrom:nil];
+    [self setUseCalcTo:nil];
+    [self setPurchaseNumber:nil];
+    [self setStock:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

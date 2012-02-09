@@ -9,6 +9,9 @@
 #import "GasMeterViewController.h"
 
 @implementation GasMeterViewController
+@synthesize linePressure;
+@synthesize differential;
+@synthesize temperature;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +49,9 @@
 
 - (void)viewDidUnload
 {
+    [self setLinePressure:nil];
+    [self setDifferential:nil];
+    [self setTemperature:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

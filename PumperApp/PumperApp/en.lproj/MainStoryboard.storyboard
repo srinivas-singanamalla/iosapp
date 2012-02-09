@@ -127,10 +127,13 @@
                     </view>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="qAE-ka-gfs" id="JNk-mN-wm9"/>
+                        <outlet property="differential" destination="vdc-a9-mcr" id="4Uv-Er-pDS"/>
+                        <outlet property="linePressure" destination="T6t-oq-dVw" id="9fI-1b-ggr"/>
+                        <outlet property="temperature" destination="Wzr-kP-WJR" id="eDS-y0-dXH"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1629" y="-717"/>
+            <point key="canvasLocation" x="1551" y="-715"/>
         </scene>
         <scene sceneID="HCI-B7-Oaj">
             <objects>
@@ -267,7 +270,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="casingPressure" destination="8Ru-Bd-LuB" id="owC-sI-Nre"/>
+                        <outlet property="chokeSize" destination="aMV-8o-1AC" id="2p7-5N-1Jo"/>
+                        <outlet property="comments" destination="U3L-vf-uYm" id="g5M-Rn-Vkw"/>
+                        <outlet property="dailyProducingStatus" destination="qhP-Yy-6nb" id="s7z-Bu-C3h"/>
                         <outlet property="detailDescriptionLabel" destination="GJU-jP-QWM" id="Bd2-ac-5Do"/>
+                        <outlet property="downtimeUnits" destination="kTP-Cy-eud" id="dwn-Pq-sUo"/>
+                        <outlet property="tubingPressure" destination="hEF-S9-gfu" id="sD1-CQ-shH"/>
                     </connections>
                 </viewController>
             </objects>
@@ -408,11 +417,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bottomFrom" destination="9fs-ij-OXC" id="4t8-M0-ppZ"/>
+                        <outlet property="bottomTo" destination="OdD-Yo-lTN" id="B6a-ra-YGS"/>
                         <outlet property="detailDescriptionLabel" destination="5Cd-sM-kgT" id="hgT-OR-Khk"/>
+                        <outlet property="purchaseNumber" destination="6Jv-qY-Cxa" id="n00-Ig-xu6"/>
+                        <outlet property="stock" destination="5NR-tH-bQv" id="TIk-BC-STA"/>
+                        <outlet property="topFrom" destination="8bn-u6-hhu" id="3Ia-Ea-xJa"/>
+                        <outlet property="topTo" destination="cDb-A1-gGY" id="VBM-Wt-zmO"/>
+                        <outlet property="useCalcFrom" destination="Aqg-lr-qeS" id="P4h-Kd-kXv"/>
+                        <outlet property="useCalcTo" destination="nR6-FJ-4IG" id="bJz-ca-d5y"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1617" y="446"/>
+            <point key="canvasLocation" x="1601" y="414"/>
         </scene>
         <scene sceneID="18">
             <objects>
@@ -483,27 +500,6 @@
             <point key="canvasLocation" x="-434" y="1504"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BIDDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BIDDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BIDMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BIDMasterViewController.h"/>
-        </class>
-        <class className="GasMeterViewController" superclassName="BIDDetailViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GasMeterViewController.h"/>
-        </class>
-        <class className="TankViewController" superclassName="BIDDetailViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TankViewController.h"/>
-        </class>
-        <class className="WellheadViewController" superclassName="BIDDetailViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WellheadViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

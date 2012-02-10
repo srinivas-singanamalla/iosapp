@@ -15,8 +15,13 @@
 
 @implementation BIDDetailViewController
 
+@synthesize stopId = _stopId;
+@synthesize stopName = _stopName;
+@synthesize stopDescription = _stopDescription;
 @synthesize detailItem = _detailItem;
+@synthesize longitude = _longitude;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize latitude = _latitude;
 @synthesize masterPopoverController = _masterPopoverController;
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
@@ -64,6 +69,11 @@
 
 - (void)viewDidUnload
 {
+    [self setStopId:nil];
+    [self setStopName:nil];
+    [self setStopDescription:nil];
+    [self setLongitude:nil];
+    [self setLatitude:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

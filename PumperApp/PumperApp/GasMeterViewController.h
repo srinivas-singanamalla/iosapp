@@ -10,6 +10,7 @@
 #import "BIDDetailViewController.h"
 
 @interface GasMeterViewController : BIDDetailViewController
+
 @property (strong, nonatomic) IBOutlet UITextField *linePressure;
 @property (strong, nonatomic) IBOutlet UITextField *differential;
 @property (strong, nonatomic) IBOutlet UITextField *temperature;

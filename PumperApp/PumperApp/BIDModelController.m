@@ -9,6 +9,8 @@
 #import "BIDModelController.h"
 
 #import "BIDDetailViewController.h"
+#import "Stop.h"
+#import "StopManagerMock.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -21,11 +23,14 @@
 
 @interface BIDModelController()
 @property (readonly, strong, nonatomic) NSArray *pageData;
+@property (strong, nonatomic) id<StopList> stopList;
 @end
 
 @implementation BIDModelController
 
 @synthesize pageData = _pageData;
+@synthesize stopList = _stopList;
+
 
 - (id)init
 {
@@ -34,6 +39,8 @@
         // Create the data model.
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         _pageData = [[dateFormatter monthSymbols] copy];
+        _stopList = [StopManagerMock getStopManager];
+        
     }
     return self;
 }
@@ -51,6 +58,7 @@
     BIDDetailViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier: index < 4 ? [controllerIdentifierArray objectAtIndex:index] : @"BIDDetailViewController"];
     
     dataViewController.dataObject = [self.pageData objectAtIndex:index];
+    dataViewController.stopDetails = [self.stopList getStopDetails:index];
     return dataViewController;
 }
 

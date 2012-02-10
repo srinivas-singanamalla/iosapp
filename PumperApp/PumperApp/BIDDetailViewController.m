@@ -7,6 +7,7 @@
 //
 
 #import "BIDDetailViewController.h"
+#import "Stop.h"
 
 @interface BIDDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -25,6 +26,7 @@
 @synthesize masterPopoverController = _masterPopoverController;
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
+@synthesize stopDetails = _stopDetails;
 
      
 #pragma mark - Managing the detail item 
@@ -74,6 +76,7 @@
     [self setStopDescription:nil];
     [self setLongitude:nil];
     [self setLatitude:nil];
+    [self setStopDetails:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -88,6 +91,17 @@
 {
     [super viewDidAppear:animated];
     self.dataLabel.text = [self.dataObject description];
+    
+    Stop* stopDetails = (Stop*)self.stopDetails;
+    self.stopId.text = [NSString stringWithFormat:@"%d", stopDetails.stopId];
+    self.stopName.text = stopDetails.name;
+    self.stopDescription.text = stopDetails.desc;
+    self.longitude.text = stopDetails.latlong;
+
+    //[self setStopName:self.dataObject.stopName];
+     
+     
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated

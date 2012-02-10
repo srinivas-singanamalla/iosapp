@@ -13,12 +13,13 @@
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latlong" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="long" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Stop" positionX="27" positionY="306" width="128" height="120"/>
         <element name="Equipment" positionX="232" positionY="351" width="128" height="105"/>
+        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Stop" positionX="27" positionY="306" width="128" height="135"/>
     </elements>
 </model>

@@ -1,3 +1,4 @@
+
 //
 //  BIDMasterViewController.m
 //  PumperApp
@@ -10,6 +11,7 @@
 
 #import "BIDDetailViewController.h"
 #import "StopManagerMock.h"
+#import "Stop.h"
 
 static float counter = 0;
 
@@ -320,6 +322,7 @@ static float counter = 0;
         [newManagedObject setValue:[NSNumber numberWithInteger:stop.stopId] forKey:@"id"];
         [newManagedObject setValue:[NSNumber numberWithFloat:stop.latitude] forKey:@"lat"];
         [newManagedObject setValue:[NSNumber numberWithFloat:stop.longitude] forKey:@"long"];
+        [newManagedObject setValue:stop.latlong forKey:@"latlong"];
         [newManagedObject setValue:stop.desc forKey:@"desc"];
     }
     

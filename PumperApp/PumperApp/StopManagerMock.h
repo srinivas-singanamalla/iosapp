@@ -7,29 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Stop.h"
 
-@interface Stop : NSObject {
-@private
-    NSInteger stopId;
-    NSString* name;
-    float latitude;
-    float longitude;
-    NSString* desc;
-}
-
-@property (nonatomic) NSInteger stopId;
-@property (strong, nonatomic) NSString* name;
-@property (nonatomic) float latitude;
-@property (nonatomic) float longitude;
-@property (strong, nonatomic) NSString* desc;
-
-@end
-
-
-
-@interface StopManagerMock : NSObject
-
-- (Stop*) getStopDetails: (NSInteger) index;
+@interface StopManagerMock : NSObject<StopList>
 
 + (StopManagerMock*) getStopManager;
 

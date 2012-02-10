@@ -32,6 +32,10 @@
 		7050316D14E1F9A000F01891 /* TankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050316B14E1F99F00F01891 /* TankViewController.m */; };
 		7050317014E1F9B400F01891 /* WellheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050316F14E1F9B400F01891 /* WellheadViewController.m */; };
 		7050317114E1F9B400F01891 /* WellheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050316F14E1F9B400F01891 /* WellheadViewController.m */; };
+		7050319214E4CB5800F01891 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319114E4CB5800F01891 /* Stop.m */; };
+		7050319314E4CB5800F01891 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319114E4CB5800F01891 /* Stop.m */; };
+		7050319614E4DE3900F01891 /* StopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319514E4DE3900F01891 /* StopList.m */; };
+		7050319714E4DE3900F01891 /* StopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319514E4DE3900F01891 /* StopList.m */; };
 		707A412214DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
 		707A412314DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,10 @@
 		7050316B14E1F99F00F01891 /* TankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankViewController.m; sourceTree = "<group>"; };
 		7050316E14E1F9B400F01891 /* WellheadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellheadViewController.h; sourceTree = "<group>"; };
 		7050316F14E1F9B400F01891 /* WellheadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellheadViewController.m; sourceTree = "<group>"; };
+		7050319014E4CB5800F01891 /* Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
+		7050319114E4CB5800F01891 /* Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stop.m; sourceTree = "<group>"; };
+		7050319414E4DE3900F01891 /* StopList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopList.h; sourceTree = "<group>"; };
+		7050319514E4DE3900F01891 /* StopList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopList.m; sourceTree = "<group>"; };
 		707A412014DDBED300F43040 /* StopManagerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopManagerMock.h; sourceTree = "<group>"; };
 		707A412114DDBED300F43040 /* StopManagerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopManagerMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +161,8 @@
 				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
 				7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */,
 				7021D33A14DC69BD005076D1 /* Supporting Files */,
+				7050319414E4DE3900F01891 /* StopList.h */,
+				7050319514E4DE3900F01891 /* StopList.m */,
 				707A412014DDBED300F43040 /* StopManagerMock.h */,
 				707A412114DDBED300F43040 /* StopManagerMock.m */,
 				7050316614E1F97400F01891 /* GasMeterViewController.h */,
@@ -161,6 +171,8 @@
 				7050316B14E1F99F00F01891 /* TankViewController.m */,
 				7050316E14E1F9B400F01891 /* WellheadViewController.h */,
 				7050316F14E1F9B400F01891 /* WellheadViewController.m */,
+				7050319014E4CB5800F01891 /* Stop.h */,
+				7050319114E4CB5800F01891 /* Stop.m */,
 			);
 			path = PumperApp;
 			sourceTree = "<group>";
@@ -311,6 +323,8 @@
 				7050316814E1F97400F01891 /* GasMeterViewController.m in Sources */,
 				7050316C14E1F9A000F01891 /* TankViewController.m in Sources */,
 				7050317014E1F9B400F01891 /* WellheadViewController.m in Sources */,
+				7050319214E4CB5800F01891 /* Stop.m in Sources */,
+				7050319614E4DE3900F01891 /* StopList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +338,8 @@
 				7050316914E1F97400F01891 /* GasMeterViewController.m in Sources */,
 				7050316D14E1F9A000F01891 /* TankViewController.m in Sources */,
 				7050317114E1F9B400F01891 /* WellheadViewController.m in Sources */,
+				7050319314E4CB5800F01891 /* Stop.m in Sources */,
+				7050319714E4DE3900F01891 /* StopList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

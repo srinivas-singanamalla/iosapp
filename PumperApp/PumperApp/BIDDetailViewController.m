@@ -25,7 +25,7 @@
 @synthesize latitude = _latitude;
 @synthesize masterPopoverController = _masterPopoverController;
 @synthesize dataLabel = _dataLabel;
-@synthesize dataObject = _dataObject;
+@synthesize equipmentDetails = _equipmentDetails;
 @synthesize stopDetails = _stopDetails;
 
      
@@ -51,6 +51,11 @@
 
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
+        Stop* stop = (Stop*) _detailItem;
+        self.stopId.text = [NSString stringWithFormat:@"%d", stop.stopId];
+        self.stopName.text = stop.name;
+        self.longitude.text = stop.latlong;
+        self.stopDescription.text = stop.desc;
     }
 }
 
@@ -90,7 +95,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+    self.dataLabel.text = [self.equipmentDetails description];
     
     Stop* stopDetails = (Stop*)self.stopDetails;
     self.stopId.text = [NSString stringWithFormat:@"%d", stopDetails.stopId];

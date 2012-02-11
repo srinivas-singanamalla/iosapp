@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="H2z-Or-Ndg">
-                                <rect key="frame" x="40" y="9" width="546" height="150"/>
+                                <rect key="frame" x="45" y="8" width="546" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data Description Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="qAE-ka-gfs">
@@ -209,7 +209,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="231" lineBreakMode="tailTruncation" minimumFontSize="10" id="lK2-wA-5bB">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="231" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="lK2-wA-5bB">
                                         <rect key="frame" x="97" y="40" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -255,7 +255,7 @@
                                 <color key="backgroundColor" red="0.29025766159999999" green="0.52611941939999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="qAE-ka-gfs" id="JNk-mN-wm9"/>
@@ -274,7 +274,7 @@
         <scene sceneID="HCI-B7-Oaj">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lND-Ys-XdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="tZ5-Ok-FJ7" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="tZ5-Ok-FJ7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nvs-aM-k9g"/>
                 </pageViewController>
             </objects>
@@ -452,7 +452,7 @@
                                 <color key="backgroundColor" red="0.29025766159999999" green="0.52611941939999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="casingPressure" destination="8Ru-Bd-LuB" id="owC-sI-Nre"/>
@@ -658,7 +658,7 @@
                                 <color key="backgroundColor" red="0.29025766159999999" green="0.52611941939999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="bottomFrom" destination="9fs-ij-OXC" id="4t8-M0-ppZ"/>

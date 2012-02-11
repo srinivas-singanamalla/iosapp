@@ -52,6 +52,17 @@
     return YES;
 }
 
+- (void) setFirstPageOf:(UIPageViewController*)pageViewController withStoryBoard: (UIStoryboard*)storyboard  {
+    BIDDetailViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:storyboard];
+    
+    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
+    [[self getUIPageViewController] setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+}
+
+- (UIPageViewController*) getUIPageViewController {
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    return (UIPageViewController*)[splitViewController.viewControllers lastObject];
+}
 
 - (void) test {
     

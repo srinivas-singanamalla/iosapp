@@ -12,6 +12,17 @@
 
 @implementation StopManagerMock
 
+- (Stop*) getStopDetailsBy:(NSInteger)stopId {
+    for (int index = 0; index < 8; index ++) {
+        Stop* stop = [self getStopDetails:index];
+        if (stop.stopId == stopId) {
+            return stop;
+        }
+    }
+    
+    return [self getStopDetails:0];
+}
+
 - (Stop*) getStopDetails: (NSInteger) index {
     
     if (index > 7) {

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class UIPageViewController;
 
 @interface BIDAppDelegate : UIResponder <UIApplicationDelegate, UIPageViewControllerDelegate>
 
@@ -18,5 +19,9 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+//its a hack
+- (UIPageViewController*) getUIPageViewController;
+- (void) setFirstPageOf:(UIPageViewController*)pageViewController withStoryBoard: (UIStoryboard*)storyboard;
 
 @end

@@ -31,4 +31,6 @@
 
 - (Stop*) getStopDetails: (NSInteger) index;
 
+- (Stop*) getStopDetailsBy:(NSInteger) stopId;
+
 @end

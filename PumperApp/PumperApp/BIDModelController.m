@@ -57,7 +57,7 @@
     
     BIDDetailViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier: index < 4 ? [controllerIdentifierArray objectAtIndex:index] : @"BIDDetailViewController"];
     
-    dataViewController.dataObject = [self.pageData objectAtIndex:index];
+    dataViewController.equipmentDetails = [self.pageData objectAtIndex:index];
     dataViewController.stopDetails = [self.stopList getStopDetails:index];
     return dataViewController;
 }
@@ -68,7 +68,7 @@
      Return the index of the given data view controller.
      For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
      */
-    return [self.pageData indexOfObject:viewController.dataObject];
+    return [self.pageData indexOfObject:viewController.equipmentDetails];
 }
 
 #pragma mark - Page View Controller Data Source

@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *latitude;
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic) id equipmentDetails;
 
 @property (strong, nonatomic) id stopDetails;
 

@@ -12,6 +12,7 @@
 #import "BIDDetailViewController.h"
 #import "StopManagerMock.h"
 #import "Stop.h"
+#import "BIDAppDelegate.h"
 
 static float counter = 0;
 
@@ -146,7 +147,21 @@ static float counter = 0;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = selectedObject;    
+    
+
+    Stop* stop = [[Stop alloc] init];
+    stop.name = (NSString*)[selectedObject valueForKey:@"name"];
+    stop.stopId = [[selectedObject valueForKey:@"id"] intValue];
+    [selectedObject valueForKey:@"lat"];
+    [selectedObject valueForKey:@"long"];
+    stop.latlong = (NSString*)[selectedObject valueForKey:@"latlong"];
+    stop.desc = (NSString*)[selectedObject valueForKey:@"desc"];
+
+    self.detailViewController.detailItem = stop;
+    self.detailViewController.stopDetails = stop;
+    BIDAppDelegate* appDelegate = (BIDAppDelegate*)[[UIApplication sharedApplication]delegate];
+    UIPageViewController* pageViewController = [appDelegate getUIPageViewController];
+    [appDelegate setFirstPageOf:pageViewController withStoryBoard:self.storyboard];                    
 }
 
 #pragma mark - Fetched results controller
@@ -301,6 +316,8 @@ static float counter = 0;
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
+    NSObject* object = [managedObject valueForKey:@"name"];
+    NSObject* dest = nil;
 }
 
 - (void)insertNewObject

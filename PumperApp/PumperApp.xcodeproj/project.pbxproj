@@ -38,6 +38,21 @@
 		7050319714E4DE3900F01891 /* StopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319514E4DE3900F01891 /* StopList.m */; };
 		707A412214DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
 		707A412314DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
+		70B9786B14E722F600A5FBAA /* StopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B9786A14E722F600A5FBAA /* StopCell.m */; };
+		70B9786F14E74E8200A5FBAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70B9786E14E74E8200A5FBAA /* Settings.bundle */; };
+		70B9787214E74F7E00A5FBAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787414E74F7E00A5FBAA /* Localizable.strings */; };
+		70B9787F14E7510B00A5FBAA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787914E7510B00A5FBAA /* 1.png */; };
+		70B9788014E7510B00A5FBAA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787914E7510B00A5FBAA /* 1.png */; };
+		70B9788114E7510B00A5FBAA /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787A14E7510B00A5FBAA /* 2.png */; };
+		70B9788214E7510B00A5FBAA /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787A14E7510B00A5FBAA /* 2.png */; };
+		70B9788314E7510B00A5FBAA /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787B14E7510B00A5FBAA /* 3.png */; };
+		70B9788414E7510B00A5FBAA /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787B14E7510B00A5FBAA /* 3.png */; };
+		70B9788514E7510B00A5FBAA /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787C14E7510B00A5FBAA /* 4.png */; };
+		70B9788614E7510B00A5FBAA /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787C14E7510B00A5FBAA /* 4.png */; };
+		70B9788714E7510B00A5FBAA /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787D14E7510B00A5FBAA /* 5.png */; };
+		70B9788814E7510B00A5FBAA /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787D14E7510B00A5FBAA /* 5.png */; };
+		70B9788914E7510B00A5FBAA /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787E14E7510B00A5FBAA /* 6.png */; };
+		70B9788A14E7510B00A5FBAA /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787E14E7510B00A5FBAA /* 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +71,6 @@
 		7021D33314DC69BD005076D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7021D33514DC69BD005076D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7021D33714DC69BD005076D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7021D33B14DC69BD005076D1 /* PumperApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PumperApp-Info.plist"; sourceTree = "<group>"; };
 		7021D33D14DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7021D33F14DC69BD005076D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7021D34114DC69BD005076D1 /* PumperApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PumperApp-Prefix.pch"; sourceTree = "<group>"; };
@@ -88,6 +102,17 @@
 		7050319514E4DE3900F01891 /* StopList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopList.m; sourceTree = "<group>"; };
 		707A412014DDBED300F43040 /* StopManagerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopManagerMock.h; sourceTree = "<group>"; };
 		707A412114DDBED300F43040 /* StopManagerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopManagerMock.m; sourceTree = "<group>"; };
+		70B9786914E722F600A5FBAA /* StopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopCell.h; sourceTree = "<group>"; };
+		70B9786A14E722F600A5FBAA /* StopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopCell.m; sourceTree = "<group>"; };
+		70B9786E14E74E8200A5FBAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		70B9787314E74F7E00A5FBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		70B9787514E74F8100A5FBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = "en.lproj/PumperApp-Info.plist"; sourceTree = "<group>"; };
+		70B9787914E7510B00A5FBAA /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		70B9787A14E7510B00A5FBAA /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		70B9787B14E7510B00A5FBAA /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		70B9787C14E7510B00A5FBAA /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		70B9787D14E7510B00A5FBAA /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		70B9787E14E7510B00A5FBAA /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7050316114E0DB3100F01891 /* BIDModelController.h */,
+				70B9786E14E74E8200A5FBAA /* Settings.bundle */,
 				7050316214E0DB3100F01891 /* BIDModelController.m */,
 				7021D34214DC69BD005076D1 /* BIDAppDelegate.h */,
 				7021D34314DC69BD005076D1 /* BIDAppDelegate.m */,
@@ -158,6 +184,7 @@
 				7021D34B14DC69BD005076D1 /* BIDMasterViewController.h */,
 				7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */,
 				7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */,
+				70B9787714E7510B00A5FBAA /* Resources */,
 				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
 				7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */,
 				7021D33A14DC69BD005076D1 /* Supporting Files */,
@@ -173,6 +200,8 @@
 				7050316F14E1F9B400F01891 /* WellheadViewController.m */,
 				7050319014E4CB5800F01891 /* Stop.h */,
 				7050319114E4CB5800F01891 /* Stop.m */,
+				70B9786914E722F600A5FBAA /* StopCell.h */,
+				70B9786A14E722F600A5FBAA /* StopCell.m */,
 			);
 			path = PumperApp;
 			sourceTree = "<group>";
@@ -180,7 +209,8 @@
 		7021D33A14DC69BD005076D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7021D33B14DC69BD005076D1 /* PumperApp-Info.plist */,
+				70B9787614E74F8100A5FBAA /* PumperApp-Info.plist */,
+				70B9787414E74F7E00A5FBAA /* Localizable.strings */,
 				7021D33C14DC69BD005076D1 /* InfoPlist.strings */,
 				7021D33F14DC69BD005076D1 /* main.m */,
 				7021D34114DC69BD005076D1 /* PumperApp-Prefix.pch */,
@@ -205,6 +235,27 @@
 				7021D36114DC69BD005076D1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70B9787714E7510B00A5FBAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70B9787814E7510B00A5FBAA /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		70B9787814E7510B00A5FBAA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				70B9787914E7510B00A5FBAA /* 1.png */,
+				70B9787A14E7510B00A5FBAA /* 2.png */,
+				70B9787B14E7510B00A5FBAA /* 3.png */,
+				70B9787C14E7510B00A5FBAA /* 4.png */,
+				70B9787D14E7510B00A5FBAA /* 5.png */,
+				70B9787E14E7510B00A5FBAA /* 6.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +330,14 @@
 			files = (
 				7021D33E14DC69BD005076D1 /* InfoPlist.strings in Resources */,
 				7021D34714DC69BD005076D1 /* MainStoryboard.storyboard in Resources */,
+				70B9786F14E74E8200A5FBAA /* Settings.bundle in Resources */,
+				70B9787214E74F7E00A5FBAA /* Localizable.strings in Resources */,
+				70B9787F14E7510B00A5FBAA /* 1.png in Resources */,
+				70B9788114E7510B00A5FBAA /* 2.png in Resources */,
+				70B9788314E7510B00A5FBAA /* 3.png in Resources */,
+				70B9788514E7510B00A5FBAA /* 4.png in Resources */,
+				70B9788714E7510B00A5FBAA /* 5.png in Resources */,
+				70B9788914E7510B00A5FBAA /* 6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7021D36314DC69BD005076D1 /* InfoPlist.strings in Resources */,
+				70B9788014E7510B00A5FBAA /* 1.png in Resources */,
+				70B9788214E7510B00A5FBAA /* 2.png in Resources */,
+				70B9788414E7510B00A5FBAA /* 3.png in Resources */,
+				70B9788614E7510B00A5FBAA /* 4.png in Resources */,
+				70B9788814E7510B00A5FBAA /* 5.png in Resources */,
+				70B9788A14E7510B00A5FBAA /* 6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +390,7 @@
 				7050317014E1F9B400F01891 /* WellheadViewController.m in Sources */,
 				7050319214E4CB5800F01891 /* Stop.m in Sources */,
 				7050319614E4DE3900F01891 /* StopList.m in Sources */,
+				70B9786B14E722F600A5FBAA /* StopCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +442,22 @@
 				7021D36214DC69BD005076D1 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70B9787414E74F7E00A5FBAA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70B9787314E74F7E00A5FBAA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		70B9787614E74F8100A5FBAA /* PumperApp-Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70B9787514E74F8100A5FBAA /* en */,
+			);
+			name = "PumperApp-Info.plist";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

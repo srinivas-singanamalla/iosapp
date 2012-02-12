@@ -13,11 +13,13 @@
 #import "StopManagerMock.h"
 #import "Stop.h"
 #import "BIDAppDelegate.h"
+#import "StopCell.h"
 
 static float counter = 0;
 
 @interface BIDMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (NSString*) imageNameAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation BIDMasterViewController
@@ -101,7 +103,7 @@ static float counter = 0;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"StopCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     [self configureCell:cell atIndexPath:indexPath];
@@ -147,7 +149,9 @@ static float counter = 0;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    
+    BIDAppDelegate* appDelegate = (BIDAppDelegate*)[[UIApplication sharedApplication]delegate];
+    UIPageViewController* pageViewController = [appDelegate getUIPageViewController];
+    [appDelegate setFirstPageOf:pageViewController withStoryBoard:self.storyboard];
 
     Stop* stop = [[Stop alloc] init];
     stop.name = (NSString*)[selectedObject valueForKey:@"name"];
@@ -157,11 +161,11 @@ static float counter = 0;
     stop.latlong = (NSString*)[selectedObject valueForKey:@"latlong"];
     stop.desc = (NSString*)[selectedObject valueForKey:@"desc"];
 
+    self.detailViewController = (BIDDetailViewController*)[pageViewController.viewControllers objectAtIndex:0];
     self.detailViewController.detailItem = stop;
     self.detailViewController.stopDetails = stop;
-    BIDAppDelegate* appDelegate = (BIDAppDelegate*)[[UIApplication sharedApplication]delegate];
-    UIPageViewController* pageViewController = [appDelegate getUIPageViewController];
-    [appDelegate setFirstPageOf:pageViewController withStoryBoard:self.storyboard];                    
+    
+                        
 }
 
 #pragma mark - Fetched results controller
@@ -315,9 +319,19 @@ static float counter = 0;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
-    NSObject* object = [managedObject valueForKey:@"name"];
-    NSObject* dest = nil;
+    StopCell* myCell = (StopCell*) cell;
+    myCell.nameLabel.text = [[managedObject valueForKey:@"name"] description];
+    myCell.detailLabel.text = [[managedObject valueForKey:@"id"] description];
+    
+    myCell.stopIndicator.image = [UIImage imageNamed:[self imageNameAtIndexPath:indexPath]];
+}
+
+- (NSString*) imageNameAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0 || indexPath.row > 6) {
+        return @"6.png";
+    } else {
+        return [NSString stringWithFormat:@"%d.png", indexPath.row];
+    }
 }
 
 - (void)insertNewObject

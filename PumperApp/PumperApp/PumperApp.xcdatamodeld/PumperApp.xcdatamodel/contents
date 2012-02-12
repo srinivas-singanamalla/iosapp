@@ -18,8 +18,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Equipment" positionX="232" positionY="351" width="128" height="105"/>
+        <element name="Equipment" positionX="232" positionY="300" width="128" height="105"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Stop" positionX="27" positionY="306" width="128" height="135"/>
+        <element name="Stop" positionX="18" positionY="270" width="128" height="135"/>
     </elements>
 </model>

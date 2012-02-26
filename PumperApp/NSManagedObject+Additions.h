@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSManagedObject_Additions : NSObject
+@interface NSManagedObject (safeSetValuesKeysWithDictionary)
+
+- (void)safeSetValuesForKeysWithDictionary:(NSDictionary *)keyedValues dateFormatter:(NSDateFormatter *)dateFormatter;
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class SQLBIService;
 
-@interface SQLBIServiceDelegate : NSObject
+@protocol SQLBIServiceDelegate <NSObject>
 
-@end
+- (void) serviceDidStart;
+
+- (void) service:(SQLBIService*)service didComplete:(NSString*)message error:(NSError *)error;
+
+@end 

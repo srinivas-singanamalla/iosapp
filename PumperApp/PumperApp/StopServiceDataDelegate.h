@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StopDAODelegate : NSObject
+@protocol StopServiceDataDelegate <NSObject>
+
+@optional
+- (void) handleArrayData:(NSArray*)objsArray;
+
+@optional
+- (void) handleData:(NSDictionary*)obj;
 
 @end

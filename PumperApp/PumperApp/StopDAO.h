@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StopServiceDataDelegate.h"
+@class Stop;
 
-@interface StopDAO : NSObject
+@interface StopDAO : NSObject<StopServiceDataDelegate>
+
+@property (weak, nonatomic) id<StopServiceDataDelegate>stopDAODelegate;
+
+- (NSManagedObject*) getStop:(NSInteger) stopId;
+
+- (NSManagedObject*) getStopAtIndex:(NSInteger)index;
+
+- (NSArray*) getAllStops;
 
 @end

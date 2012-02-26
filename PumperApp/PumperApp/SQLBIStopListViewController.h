@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SQLBIServiceDelegate.h"
 
-@class BIDDetailViewController;
+@class BIDDetailViewController, StopService;
 
 #import <CoreData/CoreData.h>
 
-@interface BIDMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface SQLBIStopListViewController : UITableViewController <NSFetchedResultsControllerDelegate, SQLBIServiceDelegate>
 
 @property (strong, nonatomic) BIDDetailViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (strong, nonatomic) StopService* stopService;
 
 @end

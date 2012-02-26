@@ -8,6 +8,21 @@
 
 #import "SQLBIService.h"
 
+
 @implementation SQLBIService
+
+
+@synthesize serviceDelegate = _serviceDelegate;
+
+- (void) start {
+    [_serviceDelegate serviceDidStart];
+    [self run];
+    
+}
+
+- (void) run {
+    [NSException raise:@"Subclass shoule implement the run method" format:@"Run method not implemented"];
+}
+
 
 @end

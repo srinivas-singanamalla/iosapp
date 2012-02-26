@@ -10,11 +10,25 @@
 
 @implementation Stop
 
-@synthesize stopId;
-@synthesize name;
-@synthesize latitude;
-@synthesize desc;
-@synthesize longitude;
-@synthesize latlong;
+- (NSString*) getName {
+    return @"name";
+}
+
+- (NSString*) getLatitude {
+    return @"lat";
+}
+
+- (NSString*) getLongitude {
+    return @"long";
+}
+
+- (NSString*) getStopId{
+    return @"stopId";
+}
+
+- (NSString*) getDescription {
+    return @"desc";
+}
+
 
 @end

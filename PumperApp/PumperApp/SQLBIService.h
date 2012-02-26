@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SQLBIServiceDelegate.h"
 
-@interface SQLBIService : NSObject
+@interface SQLBIService : NSObject {
+
+}
+
+@property (weak, nonatomic) id<SQLBIServiceDelegate> serviceDelegate;
+
+- (void) start;
+
+- (void) run;
 
 @end

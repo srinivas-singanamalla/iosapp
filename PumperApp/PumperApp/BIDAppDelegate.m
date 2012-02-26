@@ -8,7 +8,7 @@
 
 #import "BIDAppDelegate.h"
 #import "BIDModelController.h"
-#import "BIDMasterViewController.h"
+#import "SQLBIStopListViewController.h"
 
 @interface BIDAppDelegate ()
 @property (readonly, strong, nonatomic) BIDModelController *modelController;
@@ -47,7 +47,7 @@
     //test
 
     UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
-    BIDMasterViewController *controller = (BIDMasterViewController *)masterNavigationController.topViewController;
+    SQLBIStopListViewController *controller = (SQLBIStopListViewController *)masterNavigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }

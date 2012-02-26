@@ -16,7 +16,7 @@
 		7021D34414DC69BD005076D1 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34314DC69BD005076D1 /* BIDAppDelegate.m */; };
 		7021D34714DC69BD005076D1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7021D34514DC69BD005076D1 /* MainStoryboard.storyboard */; };
 		7021D34A14DC69BD005076D1 /* PumperApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */; };
-		7021D34D14DC69BD005076D1 /* BIDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */; };
+		7021D34D14DC69BD005076D1 /* SQLBIStopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34C14DC69BD005076D1 /* SQLBIStopListViewController.m */; };
 		7021D35014DC69BD005076D1 /* BIDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */; };
 		7021D35814DC69BD005076D1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D35714DC69BD005076D1 /* SenTestingKit.framework */; };
 		7021D35914DC69BD005076D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33114DC69BD005076D1 /* UIKit.framework */; };
@@ -34,8 +34,15 @@
 		7050317114E1F9B400F01891 /* WellheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050316F14E1F9B400F01891 /* WellheadViewController.m */; };
 		7050319214E4CB5800F01891 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319114E4CB5800F01891 /* Stop.m */; };
 		7050319314E4CB5800F01891 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7050319114E4CB5800F01891 /* Stop.m */; };
+		7079E9DF14F17E3700DF4738 /* StopService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079E9DE14F17E3700DF4738 /* StopService.m */; };
+		7079E9E014F17E3700DF4738 /* StopService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079E9DE14F17E3700DF4738 /* StopService.m */; };
 		707A412214DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
 		707A412314DDBED300F43040 /* StopManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A412114DDBED300F43040 /* StopManagerMock.m */; };
+		7087CCF114F6EDE6008CF141 /* StopServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7087CCF014F6EDE6008CF141 /* StopServiceTest.m */; };
+		7087CCF514F6F72B008CF141 /* StopDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7087CCF414F6F72B008CF141 /* StopDAO.m */; };
+		7087CCF914F75A67008CF141 /* NSManagedObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7087CCF814F75A67008CF141 /* NSManagedObject+Additions.m */; };
+		7087CCFA14F8768B008CF141 /* StopDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7087CCF414F6F72B008CF141 /* StopDAO.m */; };
+		7087CCFD14F895A0008CF141 /* SQLBIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7087CCFC14F895A0008CF141 /* SQLBIService.m */; };
 		70B9786B14E722F600A5FBAA /* StopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B9786A14E722F600A5FBAA /* StopCell.m */; };
 		70B9786F14E74E8200A5FBAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70B9786E14E74E8200A5FBAA /* Settings.bundle */; };
 		70B9787214E74F7E00A5FBAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70B9787414E74F7E00A5FBAA /* Localizable.strings */; };
@@ -76,8 +83,8 @@
 		7021D34314DC69BD005076D1 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
 		7021D34614DC69BD005076D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7021D34914DC69BD005076D1 /* PumperApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PumperApp.xcdatamodel; sourceTree = "<group>"; };
-		7021D34B14DC69BD005076D1 /* BIDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDMasterViewController.h; sourceTree = "<group>"; };
-		7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDMasterViewController.m; sourceTree = "<group>"; };
+		7021D34B14DC69BD005076D1 /* SQLBIStopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLBIStopListViewController.h; sourceTree = "<group>"; };
+		7021D34C14DC69BD005076D1 /* SQLBIStopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLBIStopListViewController.m; sourceTree = "<group>"; };
 		7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDDetailViewController.h; sourceTree = "<group>"; };
 		7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDDetailViewController.m; sourceTree = "<group>"; };
 		7021D35614DC69BD005076D1 /* PumperAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PumperAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +103,21 @@
 		7050316F14E1F9B400F01891 /* WellheadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellheadViewController.m; sourceTree = "<group>"; };
 		7050319014E4CB5800F01891 /* Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
 		7050319114E4CB5800F01891 /* Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stop.m; sourceTree = "<group>"; };
+		7079E9DD14F17E3700DF4738 /* StopService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopService.h; sourceTree = "<group>"; };
+		7079E9DE14F17E3700DF4738 /* StopService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopService.m; sourceTree = "<group>"; };
 		707A412014DDBED300F43040 /* StopManagerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopManagerMock.h; sourceTree = "<group>"; };
 		707A412114DDBED300F43040 /* StopManagerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopManagerMock.m; sourceTree = "<group>"; };
+		7087CCEF14F6EDE6008CF141 /* StopServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopServiceTest.h; sourceTree = "<group>"; };
+		7087CCF014F6EDE6008CF141 /* StopServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopServiceTest.m; sourceTree = "<group>"; };
+		7087CCF314F6F72B008CF141 /* StopDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDAO.h; sourceTree = "<group>"; };
+		7087CCF414F6F72B008CF141 /* StopDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopDAO.m; sourceTree = "<group>"; };
+		7087CCF714F75A67008CF141 /* NSManagedObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Additions.h"; sourceTree = "<group>"; };
+		7087CCF814F75A67008CF141 /* NSManagedObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Additions.m"; sourceTree = "<group>"; };
+		7087CCFB14F895A0008CF141 /* SQLBIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLBIService.h; sourceTree = "<group>"; };
+		7087CCFC14F895A0008CF141 /* SQLBIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLBIService.m; sourceTree = "<group>"; };
+		7087CCFE14F895C5008CF141 /* SQLBIServiceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLBIServiceDelegate.h; sourceTree = "<group>"; };
+		7087CD0114F9E66A008CF141 /* SQLBIDAODelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLBIDAODelegate.h; sourceTree = "<group>"; };
+		7087CD0414F9EA6F008CF141 /* StopServiceDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopServiceDataDelegate.h; sourceTree = "<group>"; };
 		70B9786914E722F600A5FBAA /* StopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopCell.h; sourceTree = "<group>"; };
 		70B9786A14E722F600A5FBAA /* StopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopCell.m; sourceTree = "<group>"; };
 		70B9786E14E74E8200A5FBAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -140,6 +160,7 @@
 		7021D32214DC69BD005076D1 = {
 			isa = PBXGroup;
 			children = (
+				7087CCF614F75A2A008CF141 /* utils */,
 				7021D33914DC69BD005076D1 /* PumperApp */,
 				7021D35E14DC69BD005076D1 /* PumperAppTests */,
 				7021D33014DC69BD005076D1 /* Frameworks */,
@@ -171,19 +192,19 @@
 		7021D33914DC69BD005076D1 /* PumperApp */ = {
 			isa = PBXGroup;
 			children = (
+				7087CCF214F6F6FB008CF141 /* DAO */,
+				7079E9DB14F17DE000DF4738 /* Service */,
 				7050316114E0DB3100F01891 /* BIDModelController.h */,
 				70B9786E14E74E8200A5FBAA /* Settings.bundle */,
 				7050316214E0DB3100F01891 /* BIDModelController.m */,
 				7021D34214DC69BD005076D1 /* BIDAppDelegate.h */,
 				7021D34314DC69BD005076D1 /* BIDAppDelegate.m */,
 				7021D34514DC69BD005076D1 /* MainStoryboard.storyboard */,
-				7021D34B14DC69BD005076D1 /* BIDMasterViewController.h */,
-				7021D34C14DC69BD005076D1 /* BIDMasterViewController.m */,
-				7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */,
-				70B9787714E7510B00A5FBAA /* Resources */,
-				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
 				7021D34814DC69BD005076D1 /* PumperApp.xcdatamodeld */,
-				7021D33A14DC69BD005076D1 /* Supporting Files */,
+				7021D34B14DC69BD005076D1 /* SQLBIStopListViewController.h */,
+				7021D34C14DC69BD005076D1 /* SQLBIStopListViewController.m */,
+				7021D34E14DC69BD005076D1 /* BIDDetailViewController.h */,
+				7021D34F14DC69BD005076D1 /* BIDDetailViewController.m */,
 				707A412014DDBED300F43040 /* StopManagerMock.h */,
 				707A412114DDBED300F43040 /* StopManagerMock.m */,
 				7050316614E1F97400F01891 /* GasMeterViewController.h */,
@@ -196,6 +217,8 @@
 				7050319114E4CB5800F01891 /* Stop.m */,
 				70B9786914E722F600A5FBAA /* StopCell.h */,
 				70B9786A14E722F600A5FBAA /* StopCell.m */,
+				7021D33A14DC69BD005076D1 /* Supporting Files */,
+				70B9787714E7510B00A5FBAA /* Resources */,
 			);
 			path = PumperApp;
 			sourceTree = "<group>";
@@ -218,6 +241,8 @@
 				7021D36414DC69BD005076D1 /* PumperAppTests.h */,
 				7021D36514DC69BD005076D1 /* PumperAppTests.m */,
 				7021D35F14DC69BD005076D1 /* Supporting Files */,
+				7087CCEF14F6EDE6008CF141 /* StopServiceTest.h */,
+				7087CCF014F6EDE6008CF141 /* StopServiceTest.m */,
 			);
 			path = PumperAppTests;
 			sourceTree = "<group>";
@@ -229,6 +254,38 @@
 				7021D36114DC69BD005076D1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7079E9DB14F17DE000DF4738 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7079E9DD14F17E3700DF4738 /* StopService.h */,
+				7079E9DE14F17E3700DF4738 /* StopService.m */,
+				7087CCFB14F895A0008CF141 /* SQLBIService.h */,
+				7087CCFC14F895A0008CF141 /* SQLBIService.m */,
+				7087CD0414F9EA6F008CF141 /* StopServiceDataDelegate.h */,
+				7087CCFE14F895C5008CF141 /* SQLBIServiceDelegate.h */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		7087CCF214F6F6FB008CF141 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				7087CCF314F6F72B008CF141 /* StopDAO.h */,
+				7087CCF414F6F72B008CF141 /* StopDAO.m */,
+				7087CD0114F9E66A008CF141 /* SQLBIDAODelegate.h */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		7087CCF614F75A2A008CF141 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				7087CCF714F75A67008CF141 /* NSManagedObject+Additions.h */,
+				7087CCF814F75A67008CF141 /* NSManagedObject+Additions.m */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 		70B9787714E7510B00A5FBAA /* Resources */ = {
@@ -372,10 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7087CCFA14F8768B008CF141 /* StopDAO.m in Sources */,
 				7021D34014DC69BD005076D1 /* main.m in Sources */,
 				7021D34414DC69BD005076D1 /* BIDAppDelegate.m in Sources */,
 				7021D34A14DC69BD005076D1 /* PumperApp.xcdatamodeld in Sources */,
-				7021D34D14DC69BD005076D1 /* BIDMasterViewController.m in Sources */,
+				7021D34D14DC69BD005076D1 /* SQLBIStopListViewController.m in Sources */,
 				7021D35014DC69BD005076D1 /* BIDDetailViewController.m in Sources */,
 				707A412214DDBED300F43040 /* StopManagerMock.m in Sources */,
 				7050316314E0DB3100F01891 /* BIDModelController.m in Sources */,
@@ -384,6 +442,9 @@
 				7050317014E1F9B400F01891 /* WellheadViewController.m in Sources */,
 				7050319214E4CB5800F01891 /* Stop.m in Sources */,
 				70B9786B14E722F600A5FBAA /* StopCell.m in Sources */,
+				7079E9DF14F17E3700DF4738 /* StopService.m in Sources */,
+				7087CCF914F75A67008CF141 /* NSManagedObject+Additions.m in Sources */,
+				7087CCFD14F895A0008CF141 /* SQLBIService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +459,9 @@
 				7050316D14E1F9A000F01891 /* TankViewController.m in Sources */,
 				7050317114E1F9B400F01891 /* WellheadViewController.m in Sources */,
 				7050319314E4CB5800F01891 /* Stop.m in Sources */,
+				7079E9E014F17E3700DF4738 /* StopService.m in Sources */,
+				7087CCF114F6EDE6008CF141 /* StopServiceTest.m in Sources */,
+				7087CCF514F6F72B008CF141 /* StopDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

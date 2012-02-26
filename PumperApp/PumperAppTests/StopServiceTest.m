@@ -7,6 +7,7 @@
 //
 
 #import "StopServiceTest.h"
+#import "StopService.h"
 
 @implementation StopServiceTest
 
@@ -14,6 +15,31 @@
 - (void)testMath
 {
     STAssertTrue((1 + 1) == 2, @"Compiler isn't feeling well today :-(");
+}
+
+- (void) testGetStopDetails {
+    
+    StopService* stopService = [[StopService alloc] init];
+    //[stopService setDelegate:self];
+    //[stopService start];
+    
+}
+
+- (void) testGetStopDetailAtIndex {
+    
+    
+}
+
+- (void) testGetStopsCount {
+    
+}
+
+- (void) testDownloadStopInfo {
+    
+}
+
+- (void) testUploadStopIndo {
+    
 }
 
 @end

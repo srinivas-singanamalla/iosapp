@@ -8,22 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Stop : NSObject {
-@private
-    NSInteger stopId;
-    NSString* name;
-    float latitude;
-    float longitude;
-    NSString* latlong;
-    NSString* desc;
-}
+@interface Stop : NSManagedObject
 
-@property (nonatomic) NSInteger stopId;
-@property (strong, nonatomic) NSString* name;
-@property (nonatomic) float latitude;
-@property (nonatomic) float longitude;
-@property (strong, nonatomic) NSString* desc;
-@property (strong, nonatomic) NSString* latlong;
+- (NSString*) getName;
+
+- (NSString*) getLatitude;
+
+- (NSString*) getLongitude;
+
+- (NSString*) getStopId;
+
+- (NSString*) getDescription;
+
+
 
 @end
 

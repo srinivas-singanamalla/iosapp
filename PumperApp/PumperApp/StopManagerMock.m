@@ -13,14 +13,7 @@
 @implementation StopManagerMock
 
 - (Stop*) getStopDetailsBy:(NSInteger)stopId {
-    for (int index = 0; index < 8; index ++) {
-        Stop* stop = [self getStopDetails:index];
-        if (stop.stopId == stopId) {
-            return stop;
-        }
-    }
-    
-    return [self getStopDetails:0];
+    return nil;
 }
 
 - (Stop*) getStopDetails: (NSInteger) index {
@@ -29,8 +22,9 @@
         return nil;
     }
     
-    Stop* stop = [[Stop alloc] init];
     
+    /*
+     Stop* stop = [[Stop alloc] init];
     if (index == 0) {
         stop.stopId = 1234;
         stop.name = @"Stop A";
@@ -89,9 +83,9 @@
         stop.latlong = @"23 56' 78\", 45 89' 80\"";
     } else {
         NSLog([NSString stringWithFormat:@"Stop counter: %d not supported.", index], nil);
-    }
+    }*/
     
-    return stop;
+    return nil;
 }
 
 static StopManagerMock* stopManagerSingleton = nil;

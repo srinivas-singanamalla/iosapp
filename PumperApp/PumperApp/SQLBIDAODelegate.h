@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SQLBIDAODelegate : NSObject
+@protocol SQLBIDAODelegate <NSObject>
 
-@end
+- (void) dataReadyInDB;
+
+@end 

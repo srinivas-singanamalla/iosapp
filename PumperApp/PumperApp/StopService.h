@@ -7,7 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SQLBIService.h"
+#import "StopServiceDataDelegate.h"
 
-@interface StopService : NSObject
+@class StopDAO, Stop;
+
+@interface StopService : SQLBIService
+
+@property (strong, nonatomic) NSMutableData* webData;
+
+@property (strong, nonatomic) StopDAO* stopDAO;
+
+@property (weak, nonatomic) id<StopServiceDataDelegate> serviceDataDelegate;
+
+- (Stop*) getStopAt: (NSInteger) index;
+
+- (Stop*) getStop:(NSInteger) stopId;
+
+- (NSArray*) getAllStops;
 
 @end

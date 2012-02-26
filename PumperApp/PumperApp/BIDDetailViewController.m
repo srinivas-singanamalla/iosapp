@@ -52,10 +52,10 @@
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
         Stop* stop = (Stop*) _detailItem;
-        self.stopId.text = [NSString stringWithFormat:@"%d", stop.stopId];
-        self.stopName.text = stop.name;
-        self.longitude.text = stop.latlong;
-        self.stopDescription.text = stop.desc;
+        self.stopId.text = [stop getStopId];
+        self.stopName.text = [stop getName];
+        self.longitude.text = [stop getLongitude];
+        self.stopDescription.text = [stop getDescription];
     }
 }
 
@@ -98,11 +98,12 @@
     self.dataLabel.text = [self.equipmentDetails description];
     
     Stop* stopDetails = (Stop*)self.stopDetails;
+/*
     self.stopId.text = [NSString stringWithFormat:@"%d", stopDetails.stopId];
     self.stopName.text = stopDetails.name;
     self.stopDescription.text = stopDetails.desc;
     self.longitude.text = stopDetails.latlong;
-
+*/
     //[self setStopName:self.dataObject.stopName];
      
      

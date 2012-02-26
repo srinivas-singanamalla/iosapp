@@ -7,26 +7,28 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
  //
 
-#import "BIDMasterViewController.h"
+#import "SQLBIStopListViewController.h"
 
 #import "BIDDetailViewController.h"
 #import "StopManagerMock.h"
 #import "Stop.h"
 #import "BIDAppDelegate.h"
 #import "StopCell.h"
+#import "StopService.h"
 
 static float counter = 0;
 
-@interface BIDMasterViewController ()
+@interface SQLBIStopListViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (NSString*) imageNameAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation BIDMasterViewController
+@implementation SQLBIStopListViewController
 
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize stopService = _stopService;
 
 - (void)awakeFromNib
 {
@@ -51,8 +53,12 @@ static float counter = 0;
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Download" 
+                                                                  style:UIBarButtonItemStyleDone target:self action:@selector(insertNewObject)];
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    _stopService = [[StopService alloc] init];
 }
 
 - (void)viewDidUnload
@@ -152,7 +158,7 @@ static float counter = 0;
     BIDAppDelegate* appDelegate = (BIDAppDelegate*)[[UIApplication sharedApplication]delegate];
     UIPageViewController* pageViewController = [appDelegate getUIPageViewController];
     [appDelegate setFirstPageOf:pageViewController withStoryBoard:self.storyboard];
-
+/*
     Stop* stop = [[Stop alloc] init];
     stop.name = (NSString*)[selectedObject valueForKey:@"name"];
     stop.stopId = [[selectedObject valueForKey:@"id"] intValue];
@@ -160,10 +166,10 @@ static float counter = 0;
     [selectedObject valueForKey:@"long"];
     stop.latlong = (NSString*)[selectedObject valueForKey:@"latlong"];
     stop.desc = (NSString*)[selectedObject valueForKey:@"desc"];
-
+*/
     self.detailViewController = (BIDDetailViewController*)[pageViewController.viewControllers objectAtIndex:0];
-    self.detailViewController.detailItem = stop;
-    self.detailViewController.stopDetails = stop;
+    self.detailViewController.detailItem = selectedObject;
+    self.detailViewController.stopDetails = selectedObject;
     
                         
 }
@@ -321,7 +327,7 @@ static float counter = 0;
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     StopCell* myCell = (StopCell*) cell;
     myCell.nameLabel.text = [[managedObject valueForKey:@"name"] description];
-    myCell.detailLabel.text = [[managedObject valueForKey:@"id"] description];
+    myCell.detailLabel.text = [[managedObject valueForKey:@"stopId"] description];
     
     myCell.stopIndicator.image = [UIImage imageNamed:[self imageNameAtIndexPath:indexPath]];
 }
@@ -336,39 +342,46 @@ static float counter = 0;
 
 - (void)insertNewObject
 {
+    [_stopService start];
+    [_stopService setServiceDelegate:self];
     
     // Create a new instance of the entity managed by the fetched results controller.
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+//    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+//    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+//    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
 //    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
+    /*
     Stop* stop = [[StopManagerMock getStopManager] getStopDetails:counter];
     
     if (stop != nil) {
         [newManagedObject setValue:stop.name forKey:@"name"];
         [newManagedObject setValue:[NSNumber numberWithInteger:stop.stopId] forKey:@"id"];
-        [newManagedObject setValue:[NSNumber numberWithFloat:stop.latitude] forKey:@"lat"];
-        [newManagedObject setValue:[NSNumber numberWithFloat:stop.longitude] forKey:@"long"];
+        [newManagedObject setValue:stop.latitude forKey:@"lat"];
+        [newManagedObject setValue:stop.longitude forKey:@"long"];
         [newManagedObject setValue:stop.latlong forKey:@"latlong"];
         [newManagedObject setValue:stop.desc forKey:@"desc"];
+    }*/
+    
+    counter ++;
+}
+
+- (void) serviceDidStart {
+    //show the downloading link
+}
+
+
+
+- (void) service:(SQLBIService*)service didComplete:(NSString*)message error:(NSError *)error {
+    //hide the activity.
+    if ([service isKindOfClass:[StopService class]]) {
+        StopService* service = (StopService*)service;
+        NSArray* stops = [service getAllStops];
     }
     
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    counter ++;
+    //show
 }
 
 @end

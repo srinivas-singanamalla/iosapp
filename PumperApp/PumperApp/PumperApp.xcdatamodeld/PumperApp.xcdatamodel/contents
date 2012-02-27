@@ -9,13 +9,13 @@
     <entity name="Event">
         <attribute name="timeStamp" optional="YES" attributeType="Date"/>
     </entity>
-    <entity name="Stop" syncable="YES">
+    <entity name="Stop" representedClassName="Stop" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="key" value="value"/>
             </userInfo>
         </attribute>
-        <attribute name="key" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>

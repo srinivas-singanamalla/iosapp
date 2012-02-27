@@ -9,26 +9,26 @@
 #import "Stop.h"
 
 @implementation Stop
-
+/*
 - (NSString*) getName {
-    return @"name";
+    return [self valueForKey:@"name"];
 }
 
 - (NSString*) getLatitude {
-    return @"lat";
+    return [self valueForKey:@"latitude"];
 }
 
 - (NSString*) getLongitude {
-    return @"long";
+    return [self valueForKey:@"longitude"];
 }
 
 - (NSString*) getStopId{
-    return @"stopId";
+    return [self valueForKey:@"stopId"];
 }
 
 - (NSString*) getDescription {
-    return @"desc";
+    return [self valueForKey:@"desc"];
 }
-
+*/
 
 @end

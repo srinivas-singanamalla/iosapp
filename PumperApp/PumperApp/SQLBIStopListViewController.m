@@ -15,12 +15,14 @@
 #import "BIDAppDelegate.h"
 #import "StopCell.h"
 #import "StopService.h"
+#import "LoadingView.h"
 
 static float counter = 0;
 
 @interface SQLBIStopListViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (NSString*) imageNameAtIndexPath:(NSIndexPath *)indexPath;
+@property (nonatomic, strong) LoadingView* loadingView;
 @end
 
 @implementation SQLBIStopListViewController
@@ -29,6 +31,7 @@ static float counter = 0;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize stopService = _stopService;
+@synthesize loadingView = _loadingView;
 
 - (void)awakeFromNib
 {
@@ -59,6 +62,7 @@ static float counter = 0;
     self.navigationItem.rightBarButtonItem = addButton;
     
     _stopService = [[StopService alloc] init];
+    [_stopService setServiceDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -343,7 +347,6 @@ static float counter = 0;
 - (void)insertNewObject
 {
     [_stopService start];
-    [_stopService setServiceDelegate:self];
     
     // Create a new instance of the entity managed by the fetched results controller.
 //    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -368,8 +371,18 @@ static float counter = 0;
     counter ++;
 }
 
+- (void) deleteDataInDb {
+    
+    [self.stopService deleteAllStops];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Download" 
+                                                                  style:UIBarButtonItemStyleDone target:self action:@selector(insertNewObject)];
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
 - (void) serviceDidStart {
     //show the downloading link
+    self.loadingView =
+    [LoadingView loadingViewInView:[self.view.window.subviews objectAtIndex:0]];
 }
 
 
@@ -379,6 +392,13 @@ static float counter = 0;
     if ([service isKindOfClass:[StopService class]]) {
         StopService* service = (StopService*)service;
         NSArray* stops = [service getAllStops];
+        if (self.loadingView != nil) {
+            [self.loadingView removeView];
+            
+            UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"DeleteAll" 
+                                                                          style:UIBarButtonItemStyleDone target:self action:@selector(deleteDataInDb)];
+            self.navigationItem.rightBarButtonItem = deleteButton;
+        }
     }
     
     //show

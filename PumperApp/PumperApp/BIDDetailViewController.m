@@ -52,10 +52,10 @@
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
         Stop* stop = (Stop*) _detailItem;
-        self.stopId.text = [stop getStopId];
-        self.stopName.text = [stop getName];
-        self.longitude.text = [stop getLongitude];
-        self.stopDescription.text = [stop getDescription];
+        self.stopId.text = [NSString stringWithFormat:@"%d", [(NSNumber*)[stop valueForKey:@"stopId"] intValue]];
+        self.stopName.text = [stop valueForKey:@"name"];
+        self.longitude.text = [stop valueForKey:@"longitude"];
+        self.stopDescription.text = [stop valueForKey:@"desc"];
     }
 }
 

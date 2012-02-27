@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7002C3F514FB13E400CC080A /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7002C3F414FB13E400CC080A /* LoadingView.m */; };
 		7021D33214DC69BD005076D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33114DC69BD005076D1 /* UIKit.framework */; };
 		7021D33414DC69BD005076D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33314DC69BD005076D1 /* Foundation.framework */; };
 		7021D33614DC69BD005076D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021D33514DC69BD005076D1 /* CoreGraphics.framework */; };
@@ -71,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7002C3F314FB13E400CC080A /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		7002C3F414FB13E400CC080A /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		7021D32D14DC69BD005076D1 /* PumperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PumperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021D33114DC69BD005076D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7021D33314DC69BD005076D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -284,6 +287,8 @@
 			children = (
 				7087CCF714F75A67008CF141 /* NSManagedObject+Additions.h */,
 				7087CCF814F75A67008CF141 /* NSManagedObject+Additions.m */,
+				7002C3F314FB13E400CC080A /* LoadingView.h */,
+				7002C3F414FB13E400CC080A /* LoadingView.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				7079E9DF14F17E3700DF4738 /* StopService.m in Sources */,
 				7087CCF914F75A67008CF141 /* NSManagedObject+Additions.m in Sources */,
 				7087CCFD14F895A0008CF141 /* SQLBIService.m in Sources */,
+				7002C3F514FB13E400CC080A /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

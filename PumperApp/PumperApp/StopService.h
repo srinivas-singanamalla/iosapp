@@ -26,4 +26,6 @@
 
 - (NSArray*) getAllStops;
 
+- (void) deleteAllStops;
+
 @end

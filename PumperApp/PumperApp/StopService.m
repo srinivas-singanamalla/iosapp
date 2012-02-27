@@ -99,5 +99,9 @@
     return [self.stopDAO getAllStops];
 }
 
+- (void) deleteAllStops {
+    [self.stopDAO deleteAllStops];
+}
+
 
 @end

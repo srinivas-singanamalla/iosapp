@@ -72,7 +72,14 @@
     return objects;
 }
 
-
+- (void) deleteAllStops {
+    BIDAppDelegate *appDelegate = (BIDAppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *objectContext = [appDelegate managedObjectContext];
+    NSArray* managedObjectStops = [self getAllStops];
+    for (NSManagedObject* stop in managedObjectStops) {
+        [objectContext deleteObject:stop];
+    }
+}
 
 - (NSString*) newString:(NSInteger)num {
     return [NSString stringWithFormat:@"%d", num];

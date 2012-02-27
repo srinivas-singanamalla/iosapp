@@ -10,15 +10,7 @@
 
 @interface Stop : NSManagedObject
 
-- (NSString*) getName;
 
-- (NSString*) getLatitude;
-
-- (NSString*) getLongitude;
-
-- (NSString*) getStopId;
-
-- (NSString*) getDescription;
 
 
 

@@ -389,6 +389,7 @@ static float counter = 0;
 
 - (void) service:(SQLBIService*)service didComplete:(NSString*)message error:(NSError *)error {
     //hide the activity.
+    NSLog(@"service %@ did complete ", [service description]);
     if ([service isKindOfClass:[StopService class]]) {
         StopService* service = (StopService*)service;
         NSArray* stops = [service getAllStops];

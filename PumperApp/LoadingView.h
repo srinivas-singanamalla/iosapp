@@ -16,8 +16,10 @@
 
 @interface LoadingView : UIView
 {
-    
+    @private
 }
+
++ (void) setMessage:(NSString*)message;
 
 + (id)loadingViewInView:(UIView *)aSuperview;
 - (void)removeView;

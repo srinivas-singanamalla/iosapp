@@ -2,12 +2,14 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C2002" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Equipment" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="equipmentId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Event">
         <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+    </entity>
+    <entity name="Gasmeter" parentEntity="Equipment" syncable="YES">
+        <attribute name="maxPressure" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="Stop" representedClassName="Stop" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,9 +23,23 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stopId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Tank" parentEntity="Equipment" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="storageStock" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Wellhead" parentEntity="Equipment" syncable="YES">
+        <attribute name="casingPressure" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downtime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tubingPressure" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Equipment" positionX="232" positionY="300" width="128" height="105"/>
+        <element name="Equipment" positionX="232" positionY="300" width="128" height="90"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
         <element name="Stop" positionX="18" positionY="270" width="128" height="135"/>
+        <element name="Gasmeter" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Tank" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Wellhead" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

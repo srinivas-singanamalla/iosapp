@@ -69,6 +69,11 @@ CGPathRef NewPathWithRoundRect(CGRect rect, CGFloat cornerRadius)
 }
 
 @implementation LoadingView
+static NSString* messageVal;
+
++ (void) setMessage:(NSString*)message {
+    messageVal = message;
+}
 
 //
 // loadingViewInView:
@@ -102,7 +107,7 @@ CGPathRef NewPathWithRoundRect(CGRect rect, CGFloat cornerRadius)
 	UILabel *loadingLabel =
     [[UILabel alloc]
       initWithFrame:labelFrame];
-	loadingLabel.text = NSLocalizedString(@"Loading...", nil);
+	loadingLabel.text = NSLocalizedString(@"Downloading from Server", nil);
 	loadingLabel.textColor = [UIColor whiteColor];
 	loadingLabel.backgroundColor = [UIColor clearColor];
 	loadingLabel.textAlignment = UITextAlignmentCenter;
